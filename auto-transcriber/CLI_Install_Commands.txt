@@ -1,0 +1,40 @@
+CLI installation commands:
+
+1. First Upgrade pip to latest version:
+
+  pip install --upgrade pip
+
+2. Install dependencies.
+
+  pip install torch
+
+  pip install openai-whisper
+
+  pip install transformers
+
+  pip install fastapi
+
+  pip install "uvicorn[standard]"
+
+  pip install python-multipart
+
+  (You can do these all in one line of "pip install x, y, z" if you really want,
+  but I recommend one at a time to ensure you know exactly where the problem lies
+  if there happens to be one.)
+
+3. Verify FFmpeg (macOS / Windows)
+
+  (Note: you need to have the "homebrew" package manager on mac and the
+  "Chocolatey" package manaer on Windows to install the following.)
+
+  macOS:
+    brew install ffmpeg
+
+  Windows:
+    choco install ffmpeg
+
+  Check version (Both windows and Mac)
+    ffpmeg -version
+
+
+4. Run "check_dependencies.py" script to ensure everything is downloaded correctly.
